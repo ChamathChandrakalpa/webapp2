@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Premium Online Shopping</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span><i class="fas fa-phone-alt me-2"></i> +94 76 123 4567</span>
+                    <span class="ms-3"><i class="fas fa-envelope me-2"></i> info@shopease.lk</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <span>Free shipping on orders over Rs. 5000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="ShopEase" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown">Categories</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Electronics</a>
+                            <a class="dropdown-item" href="#">Fashion</a>
+                            <a class="dropdown-item" href="#">Home & Garden</a>
+                            <a class="dropdown-item" href="#">Beauty</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="nav-link me-3"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-link me-3"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-link position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slide1.jpg" class="d-block w-100" alt="Summer Collection">
+                <div class="carousel-caption">
+                    <h5>Summer Collection 2023</h5>
+                    <p>Up to 50% off on selected items</p>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide2.jpg" class="d-block w-100" alt="New Arrivals">
+                <div class="carousel-caption">
+                    <h5>New Arrivals</h5>
+                    <p>Discover the latest trends</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide3.jpg" class="d-block w-100" alt="Tech Gadgets">
+                <div class="carousel-caption">
+                    <h5>Tech Gadgets</h5>
+                    <p>Cutting-edge technology at your fingertips</p>
+                    <a href="#" class="btn btn-primary">Browse</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Shop by Category</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="images/category1.jpg" alt="Electronics" class="img-fluid">
+                        <div class="category-overlay">
+                            <h4>Electronics</h4>
+                            <a href="#" class="btn btn-outline-light">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="images/category2.jpg" alt="Fashion" class="img-fluid">
+                        <div class="category-overlay">
+                            <h4>Fashion</h4>
+                            <a href="#" class="btn btn-outline-light">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="images/category3.jpg" alt="Home & Garden" class="img-fluid">
+                        <div class="category-overlay">
+                            <h4>Home & Garden</h4>
+                            <a href="#" class="btn btn-outline-light">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="section-title">Featured Products</h2>
+                <a href="#" class="btn btn-outline-primary">View All</a>
+            </div>
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge bg-danger">Sale</div>
+                        <div class="product-thumb">
+                            <img src="images/product1.jpg" class="img-fluid" alt="Product 1">
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Wireless Headphones</h5>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 12,990</span>
+                                <span class="original-price">Rs. 15,990</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(24)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge bg-success">New</div>
+                        <div class="product-thumb">
+                            <img src="images/product2.jpg" class="img-fluid" alt="Product 2">
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Smart Watch</h5>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 24,990</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(18)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="images/product3.jpg" class="img-fluid" alt="Product 3">
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Men's Casual Shirt</h5>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 3,490</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(32)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge bg-warning">-20%</div>
+                        <div class="product-thumb">
+                            <img src="images/product4.jpg" class="img-fluid" alt="Product 4">
+                            <div class="product-actions">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-heart"></i></button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                                <button class="btn btn-sm btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h5 class="product-title">Bluetooth Speaker</h5>
+                            <div class="product-price">
+                                <span class="current-price">Rs. 8,990</span>
+                                <span class="original-price">Rs. 11,990</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(15)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="promo-banner">
+                        <img src="images/banner1.jpg" class="img-fluid rounded" alt="Summer Sale">
+                        <div class="banner-content">
+                            <h3>Summer Sale</h3>
+                            <p>Up to 50% off on selected items</p>
+                            <a href="#" class="btn btn-light">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="promo-banner">
+                        <img src="images/banner2.jpg" class="img-fluid rounded" alt="New Arrivals">
+                        <div class="banner-content">
+                            <h3>New Arrivals</h3>
+                            <p>Discover the latest trends</p>
+                            <a href="#" class="btn btn-light">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-item text-center">
+                            <img src="images/user1.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
+                            <p class="testimonial-text">"Great products and excellent customer service. My order arrived quickly and was exactly as described. Will definitely shop here again!"</p>
+                            <h5 class="customer-name">Nimal Perera</h5>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item text-center">
+                            <img src="images/user2.jpg" class="rounded-circle mb-3" width="80" alt="Customer">
+                            <p class="testimonial-text">"I love the quality of the products I purchased. The website is easy to navigate and the checkout process was smooth. Highly recommended!"</p>
+                            <h5 class="customer-name">Kamala Silva</h5>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h3 class="mb-3">Subscribe to Our Newsletter</h3>
+                    <p class="mb-4">Get the latest updates on new products and upcoming sales</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <img src="images/logo-white.png" alt="ShopEase" class="mb-3" height="40">
+                    <p class="mb-3">Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Shop</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">My Account</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Order Tracking</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Wishlist</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, Colombo</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +94 76 123 4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@shopease.lk</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 ShopEase. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="images/payment-methods.png" alt="Payment Methods" height="30">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top btn btn-primary rounded-circle"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

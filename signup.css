@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #4e73df;
+    --primary-hover: #3a5bc7;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --google-color: #db4437;
+    --facebook-color: #4267b2;
+    --apple-color: #000000;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #fd7e14;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.signup-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+}
+
+.signup-content {
+    max-width: 450px;
+    width: 100%;
+}
+
+.signup-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), #224abe);
+    color: white;
+}
+
+.signup-hero {
+    max-width: 500px;
+}
+
+.logo img {
+    transition: transform 0.3s;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+}
+
+.signup-right h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* Social Login Buttons */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-google {
+    background-color: white;
+    color: var(--google-color);
+    border-color: #ddd;
+}
+
+.btn-google:hover {
+    background-color: #f8f8f8;
+    color: var(--google-color);
+}
+
+.btn-facebook {
+    background-color: white;
+    color: var(--facebook-color);
+    border-color: #ddd;
+}
+
+.btn-facebook:hover {
+    background-color: #f8f8f8;
+    color: var(--facebook-color);
+}
+
+.btn-apple {
+    background-color: white;
+    color: var(--apple-color);
+    border-color: #ddd;
+}
+
+.btn-apple:hover {
+    background-color: #f8f8f8;
+    color: var(--apple-color);
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+/* Form Styles */
+.form-floating label {
+    color: #777;
+}
+
+.form-control {
+    padding: 16px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+.form-control.is-invalid {
+    border-color: var(--danger-color);
+}
+
+.form-control.is-valid {
+    border-color: var(--success-color);
+}
+
+/* Password Strength */
+.password-strength .progress {
+    height: 5px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.password-strength .progress-bar {
+    background-color: var(--danger-color);
+    transition: width 0.3s, background-color 0.3s;
+}
+
+/* Signup Button */
+.signup-btn {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(78, 115, 223, 0.3);
+}
+
+/* Benefits */
+.benefits {
+    margin-top: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.benefit-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.benefit-item i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .signup-container {
+        flex-direction: column;
+    }
+    
+    .signup-left, .signup-right {
+        padding: 2rem 1.5rem;
+    }
+    
+    .signup-right {
+        padding-bottom: 4rem;
+    }
+    
+    .signup-content, .signup-hero {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .signup-right h2 {
+        font-size: 1.6rem;
+    }
+    
+    .btn-social {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New Product | ShopEase</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="productRegistration.css">
+</head>
+<body>
+    <div class="registration-container">
+        <!-- Header -->
+        <header class="registration-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="ShopEase" height="40">
+                        </a>
+                        <h1 class="page-title">Product Registration</h1>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Progress Steps -->
+        <div class="progress-steps">
+            <div class="container">
+                <div class="steps">
+                    <div class="step " data-step="1">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">Basic Info</div>
+                    </div>
+                    <div class="step " data-step="2">
+                        <div class="step-circle">2</div>
+                        <div class="step-label">Pricing</div>
+                    </div>
+                    <div class="step " data-step="3">
+                        <div class="step-circle">3</div>
+                        <div class="step-label">Inventory</div>
+                    </div>
+                    <div class="step " data-step="4">
+                        <div class="step-circle">4</div>
+                        <div class="step-label">Media</div>
+                    </div>
+                    <div class="step active" data-step="5">
+                        <div class="step-circle">5</div>
+                        <div class="step-label">Review</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Form -->
+        <main class="registration-main">
+            <div class="container">
+                <form id="productRegistrationForm" class="animate__animated animate__fadeIn">
+                    <!-- Step 1: Basic Information -->
+                    <div class="registration-step " id="step1">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-info-circle me-2"></i> Basic Information</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="productName" placeholder="Product Name" required>
+                                            <label for="productName">Product Name*</label>
+                                            <div class="invalid-feedback">Please enter a product name</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="productSKU" placeholder="SKU">
+                                            <label for="productSKU">SKU (Stock Keeping Unit)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="productDescription" placeholder="Product Description" style="height: 120px"></textarea>
+                                            <label for="productDescription">Product Description</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="productCategory" required>
+                                                <option value="" selected disabled>Select a category</option>
+                                                <option value="electronics">Electronics</option>
+                                                <option value="fashion">Fashion</option>
+                                                <option value="home">Home & Garden</option>
+                                                <option value="beauty">Beauty</option>
+                                                <option value="sports">Sports</option>
+                                            </select>
+                                            <label for="productCategory">Category*</label>
+                                            <div class="invalid-feedback">Please select a category</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="productBrand">
+                                                <option value="" selected disabled>Select a brand</option>
+                                                <option value="premium">Premium Audio</option>
+                                                <option value="sonic">Sonic Gear</option>
+                                                <option value="tech">TechPro</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <label for="productBrand">Brand</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="productModel" placeholder="Model Number">
+                                            <label for="productModel">Model Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="productWeight" placeholder="Weight">
+                                            <label for="productWeight">Weight (kg)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Pricing -->
+                    <div class="registration-step " id="step2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-tag me-2"></i> Pricing Information</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="productPrice" placeholder="Price" required>
+                                            <label for="productPrice">Price (Rs.)*</label>
+                                            <div class="invalid-feedback">Please enter a valid price</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="productComparePrice" placeholder="Compare Price">
+                                            <label for="productComparePrice">Compare at Price (Rs.)</label>
+                                            <small class="text-muted">The original price you want to show crossed out</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="productCost" placeholder="Cost per item">
+                                            <label for="productCost">Cost per item (Rs.)</label>
+                                            <small class="text-muted">The cost you pay for this product</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="productTax" required>
+                                                <option value="0" selected>No Tax</option>
+                                                <option value="8">8% VAT</option>
+                                                <option value="12">12% VAT</option>
+                                                <option value="18">18% VAT</option>
+                                            </select>
+                                            <label for="productTax">Tax Rate*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="chargeTax">
+                                            <label class="form-check-label" for="chargeTax">
+                                                Charge tax on this product
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Inventory -->
+                    <div class="registration-step " id="step3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-boxes me-2"></i> Inventory Management</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="productBarcode" placeholder="Barcode">
+                                            <label for="productBarcode">Barcode (ISBN, UPC, etc.)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="inventoryPolicy" required>
+                                                <option value="continue">Continue selling when out of stock</option>
+                                                <option value="deny">Stop selling when out of stock</option>
+                                            </select>
+                                            <label for="inventoryPolicy">Inventory Policy*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="productQuantity" placeholder="Quantity" value="0">
+                                            <label for="productQuantity">Quantity*</label>
+                                            <div class="invalid-feedback">Please enter a valid quantity</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control" id="lowStockThreshold" placeholder="Low Stock Threshold" value="5">
+                                            <label for="lowStockThreshold">Low Stock Threshold</label>
+                                            <small class="text-muted">Get notified when stock reaches this level</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="trackQuantity" checked>
+                                            <label class="form-check-label" for="trackQuantity">
+                                                Track quantity
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Media -->
+                    <div class="registration-step " id="step4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-images me-2"></i> Product Media</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="image-upload-container">
+                                            <div class="dropzone" id="productImagesDropzone">
+                                                <div class="dz-message">
+                                                    <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                                                    <h5>Drag & drop product images here</h5>
+                                                    <p>or click to browse files</p>
+                                                    <small class="text-muted">Recommended size: 800x800px, max 5MB per image</small>
+                                                </div>
+                                            </div>
+                                            <div class="image-preview mt-3" id="imagePreview"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="youtubeUrl" placeholder="YouTube URL">
+                                            <label for="youtubeUrl">YouTube Video URL</label>
+                                            <small class="text-muted">Link to a product video (optional)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Review -->
+                    <div class="registration-step active" id="step5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-check-circle me-2"></i> Review & Submit</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="review-summary">
+                                    <h4 class="mb-4">Please review your product information</h4>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="review-section">
+                                                <h5><i class="fas fa-info-circle me-2"></i> Basic Information</h5>
+                                                <div class="review-item">
+                                                    <strong>Product Name:</strong>
+                                                    <span id="reviewProductName"></span>
+                                                </div>
+                                                <div class="review-item">
+                                                    <strong>Category:</strong>
+                                                    <span id="reviewCategory"></span>
+                                                </div>
+                                                <div class="review-item">
+                                                    <strong>Brand:</strong>
+                                                    <span id="reviewBrand"></span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="review-section mt-4">
+                                                <h5><i class="fas fa-tag me-2"></i> Pricing</h5>
+                                                <div class="review-item">
+                                                    <strong>Price:</strong>
+                                                    <span id="reviewPrice"></span>
+                                                </div>
+                                                <div class="review-item">
+                                                    <strong>Compare at Price:</strong>
+                                                    <span id="reviewComparePrice"></span>
+                                                </div>
+                                                <div class="review-item">
+                                                    <strong>Tax Rate:</strong>
+                                                    <span id="reviewTax"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="review-section">
+                                                <h5><i class="fas fa-boxes me-2"></i> Inventory</h5>
+                                                <div class="review-item">
+                                                    <strong>SKU:</strong>
+                                                    <span id="reviewSKU"></span>
+                                                </div>
+                                                <div class="review-item">
+                                                    <strong>Quantity:</strong>
+                                                    <span id="reviewQuantity"></span>
+                                                </div>
+                                                <div class="review-item">
+                                                    <strong>Inventory Policy:</strong>
+                                                    <span id="reviewInventoryPolicy"></span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="review-section mt-4">
+                                                <h5><i class="fas fa-images me-2"></i> Media</h5>
+                                                <div class="review-item">
+                                                    <strong>Images Uploaded:</strong>
+                                                    <span id="reviewImageCount">0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check mt-4">
+                                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">
+                                            I confirm that all information provided is accurate and I have the rights to sell this product.
+                                        </label>
+                                        <div class="invalid-feedback">You must agree to the terms</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation mt-4">
+                        <button type="button" class="btn btn-outline-secondary btn-prev" disabled >
+                            <i class="fas fa-arrow-left me-2"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary btn-next">
+                            Next <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
+                        <button type="submit" class="btn btn-success btn-submit d-none">
+                            <i class="fas fa-check-circle me-2"></i> Submit Product
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="registration-footer">
+            <div class="container">
+                <p class="text-muted text-center">© 2023 ShopEase. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Dropzone JS -->
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <!-- Custom JS -->
+    <script src="productRegistration.js"></script>
+</body>
+</html>

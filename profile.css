@@ -1,0 +1,402 @@
+:root {
+    --primary-color: #4e73df;
+    --primary-hover: #3a5bc7;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --sidebar-width: 280px;
+    --sidebar-bg: #2c3e50;
+    --sidebar-text: #b1bbc4;
+    --sidebar-active: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+.profile-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg);
+    color: white;
+    position: fixed;
+    height: 100vh;
+    padding: 20px 0;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: var(--sidebar-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.user-profile-card {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.avatar-edit-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.avatar-edit-btn:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.1);
+}
+
+.user-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.user-email {
+    font-size: 0.9rem;
+    color: var(--sidebar-text);
+    margin-bottom: 15px;
+}
+
+.user-status .badge {
+    margin: 0 3px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 4px 8px;
+}
+
+.nav {
+    padding: 20px 0;
+}
+
+.nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    color: var(--sidebar-text);
+    padding: 10px 20px;
+    border-radius: 0;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--sidebar-active);
+    color: white;
+    transform: translateX(5px);
+}
+
+.nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    font-size: 0.8rem;
+    color: var(--sidebar-text);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.page-title {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.header-actions .btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.card-title {
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-title i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Personal Info Styles */
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item label {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.info-item p {
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Security Item Styles */
+.security-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.security-item:last-child {
+    border-bottom: none;
+}
+
+.security-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(78, 115, 223, 0.1);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+.security-content {
+    flex: 1;
+}
+
+.security-content h6 {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.security-content p {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+
+.connected-accounts {
+    margin-top: 5px;
+}
+
+/* Activity Item Styles */
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(243, 156, 18, 0.1);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content h6 {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.activity-content p {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Form Switch Styles */
+.form-switch .form-check-input {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .header-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-item {
+        margin-bottom: 15px;
+    }
+    
+    .security-item, .activity-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .security-item button, .activity-item .badge {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 15px;
+    }
+    
+    .card {
+        border-radius: 8px;
+    }
+    
+    .security-item {
+        padding: 12px 0;
+    }
+    
+    .security-icon {
+        margin-right: 10px;
+    }
+}
